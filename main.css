@@ -1,0 +1,42 @@
+/* Updated column styles */
+.ojjlab-column {
+    position: relative; /* Allows absolute positioning within */
+    flex: 1 0 calc(33.3333% - 16px);
+    box-sizing: border-box;
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    min-height: 100px;
+    overflow: hidden; /* Ensure everything stays inside the column */
+}
+
+.ojjlab-column img {
+    width: 100%; /* Makes the image take up the full width of the column */
+    display: block; /* Remove any default margins or spacing */
+}
+
+/* Styles for the text overlay */
+.ojjlab-text-overlay {
+    position: absolute; /* Positioning relative to the column */
+    bottom: 10px; /* Adjust as needed. This positions the text 10px from the bottom */
+    left: 10px; /* Starts the text 10px from the left */
+    color: #fff; /* White text */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 5px 10px; /* Some padding for the text */
+    border-radius: 3px; /* Rounded corners for the text background */
+    font-size: 16px; /* Adjust text size as needed */
+    z-index: 2; /* Ensure the text is above the image */
+}
+
+/* Media queries remain the same as the previous response */
+@media (max-width: 767px) {
+    .ojjlab-column {
+        flex: 1 0 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .ojjlab-column {
+        flex: 1 0 calc(33.3333% - 16px);
+    }
+}
+
